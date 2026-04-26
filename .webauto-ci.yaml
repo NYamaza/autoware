@@ -107,6 +107,17 @@ simulations:
         artifact: main
       runtime:
         type: standard1/amd64/large
+  - name: perception
+    type: perception
+    simulator:
+      deployment:
+        type: container
+        artifact: main
+      runtime:
+        type: gpu2/amd64/large
+      parameters:
+        centerpoint_model_path: "/opt/autoware/mlmodels/centerpoint_tiny2_yamazaki"
+
 
 release:
   components:
